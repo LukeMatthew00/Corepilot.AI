@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheria AI — High-Converting AI Employees for Local Businesses</title>
+    <meta name="description" content="Hire custom AI receptionists, web chatbots, and automated follow-up assistants that run your front desk 24/7. Stop losing leads and missed calls.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor elements -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Ambient Glow Spheres -->
+    <div class="glow-orb glow-purple"></div>
+    <div class="glow-orb glow-cyan"></div>
+    <div class="glow-orb glow-magenta"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Aetheria<span class="logo-dot"></span></a>
+            <ul class="nav-links">
+                <li><a href="#calculator">Leak Calculator</a></li>
+                <li><a href="#demo">Live Demo</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#wizard" class="cta-button">Claim Free AI Mockup</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="hero-tag-pulse"></span>
+                    Now Hiring: 24/7 Digital Employees
+                </div>
+                <h1 class="hero-title">Stop Renting Staff.<br><span>Own Your Conversion.</span></h1>
+                <p class="hero-subtitle">
+                    Local businesses lose 40% of their revenue simply because their phones are busy or they respond too late. We build custom AI Voice & Chat staff that answer instantly, schedule appointments, and close leads 24/7.
+                </p>
+                <div class="hero-actions">
+                    <a href="#wizard" class="cta-button">Hire Your First AI</a>
+                    <a href="#calculator" class="cta-button secondary">Calculate Wasted Budget</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <canvas id="motion-canvas"></canvas>
+                <div class="visual-overlay-card">
+                    <div class="overlay-avatar">AI</div>
+                    <div class="overlay-details">
+                        <p>Sarah (AI Receptionist)</p>
+                        <span>Active: Booking Root Canal...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Logos -->
+    <div class="container">
+        <div class="trust-bar">
+            <span class="trust-logo">INTEGRATES WITH HOUSECALL PRO</span>
+            <span class="trust-logo">MINDBODY COMPATIBLE</span>
+            <span class="trust-logo">SERVICETITAN APPROVED</span>
+            <span class="trust-logo">GOHIGHLEVEL CRM CORE</span>
+        </div>
+    </div>
+
+    <!-- Lost Revenue Simulator / Calculator -->
+    <section id="calculator" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mathematical Reality</span>
+                <h2 class="section-title">The Cost of a Missed Call</h2>
+                <p class="section-subtitle">Most businesses underestimate how much a missed call costs them. Slide the dials to see your invisible leak.</p>
+            </div>
+            
+            <div class="simulator-panel">
+                <div class="sim-controls">
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-label">Monthly Inbound Calls</span>
+                            <span id="volume-val" class="slider-value">300</span>
+                        </div>
+                        <input type="range" id="volume-slider" class="sim-slider" min="50" max="2500" value="300">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-label">Average Job/Membership Value</span>
+                            <span id="value-val" class="slider-value">$500</span>
+                        </div>
+                        <input type="range" id="value-slider" class="sim-slider" min="50" max="5000" value="500">
+                    </div>
+
+                    <div class="sim-canvas-container">
+                        <canvas id="sim-leak-canvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="sim-results">
+                    <div class="sim-results-glow"></div>
+                    <div class="metric-box">
+                        <span class="metric-label">Estimated Annual Leak</span>
+                        <div id="lost-revenue" class="metric-value">$54,000</div>
+                    </div>
+                    <div class="metric-box recovered-line">
+                        <span class="metric-label">Secured by Aetheria AI</span>
+                        <div id="recovered-revenue" class="metric-value success">$51,300</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Console -->
+    <section id="demo" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Sandbox</span>
+                <h2 class="section-title">Experience the AI Employees</h2>
+                <p class="section-subtitle">Interact with our three main AI roles in real-time. See how they handle customer queries without human delay.</p>
+            </div>
+
+            <div class="demo-console">
+                <div class="console-tabs">
+                    <button class="console-tab active" data-tab="panel-voice">Voice Receptionist</button>
+                    <button class="console-tab" data-tab="panel-chat">Website Chatbot</button>
+                    <button class="console-tab" data-tab="panel-sms">SMS Speed-To-Lead</button>
+                </div>
+                
+                <div class="console-body">
+                    <!-- Voice Panel -->
+                    <div id="panel-voice" class="console-panel active">
+                        <div class="voice-demo-container">
+                            <div class="audio-controls">
+                                <button id="voice-play-btn" class="play-btn" aria-label="Play Call Simulation">
+                                    <div class="play-icon"></div>
+                                </button>
+                                <div class="visualizer-box">
+                                    <canvas id="voice-visualizer"></canvas>
+                                </div>
+                            </div>
+                            <div id="voice-transcript" class="transcript-display">
+                                <div style="color: var(--text-secondary); text-align: center; margin-top: 60px;">Click the play button to simulate a live inbound receptionist call.</div>
+                            </div>
+                        </div>
+                        <div class="phone-mockup-explain">
+                            <span class="explain-tag">Voice AI Sarah</span>
+                            <h3 class="explain-title">Natural Answering & Booking</h3>
+                            <p class="explain-text">Sarah handles complex calendar schedules, quotes pricing based on your services, checks provider availability, and books appointments directly into your CRM. Zero delays, infinite patience.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chatbot Panel -->
+                    <div id="panel-chat" class="console-panel">
+                        <div class="chat-window">
+                            <div id="chat-msg-container" class="chat-messages">
+                                <div class="chat-bubble bot">Hi there! Ask me anything about our AI pricing or setup times, or choose a prompt below.</div>
+                            </div>
+                            <div class="chat-input-area">
+                                <input type="text" id="chat-input-el" class="chat-input" placeholder="Type your message...">
+                                <button id="chat-send-btn" class="chat-send">Send</button>
+                            </div>
+                        </div>
+                        <div class="chat-prompts">
+                            <button class="chat-prompt-btn">How much do your AI employees cost?</button>
+                            <button class="chat-prompt-btn">How long does setup take?</button>
+                            <button class="chat-prompt-btn">How do I book an onboarding session?</button>
+                        </div>
+                    </div>
+
+                    <!-- SMS Panel -->
+                    <div id="panel-sms" class="console-panel">
+                        <div class="sms-phone-mockup">
+                            <div class="phone-speaker"></div>
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <div class="phone-contact-name">SMS Lead Follow-Up</div>
+                                    <div class="phone-contact-status">Online</div>
+                                </div>
+                                <div class="sms-thread">
+                                    <div class="sms-bubble incoming">Hey! Just filled out the form on your site. Are you guys open tomorrow?</div>
+                                    <div class="sms-bubble outgoing">Hey John! Yes we are open tomorrow from 8 AM to 6 PM. Would you like me to book an estimate call for you?</div>
+                                    <div class="sms-bubble incoming">That would be great, tomorrow at 10am works.</div>
+                                    <div class="sms-bubble outgoing">Perfect! I have booked that in. You will receive a text reminder 1 hour before. See you then!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-mockup-explain">
+                            <span class="explain-tag">SMS Automated Nurture</span>
+                            <h3 class="explain-title">Speed-To-Lead in 5 Seconds</h3>
+                            <p class="explain-text">If you don't respond to a lead in 5 minutes, conversion drops by 391%. Our SMS bots text every new lead instantly, qualify them, and lock them onto your calendar while they are still hot.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Grid (Decoy Effect) -->
+    <section id="pricing" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple Packages</span>
+                <h2 class="section-title">Invest in Output, Not Headcount</h2>
+                <p class="section-subtitle">No payroll tax, no insurance, no hiring costs. Just pure conversion performance.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Card 1 -->
+                <div class="pricing-card">
+                    <div class="pricing-name">Starter Suite</div>
+                    <div class="pricing-desc">Perfect for small local businesses starting out.</div>
+                    <div class="pricing-price">$497<span>/mo</span></div>
+                    <div class="pricing-decoy-price">Normally $697/mo</div>
+                    <ul class="pricing-features">
+                        <li>AI Website Chatbot</li>
+                        <li>Automated SMS Review Requests</li>
+                        <li>Basic 3-Step Lead Follow-up</li>
+                        <li>GHL CRM Sub-Account access</li>
+                        <li class="disabled">24/7 Voice AI Answering</li>
+                        <li class="disabled">Custom API Integrations</li>
+                    </ul>
+                    <a href="#wizard" class="cta-button secondary">Get Started</a>
+                </div>
+                
+                <!-- Card 2 (Decoy Targeted) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-name">Growth Suite</div>
+                    <div class="pricing-desc">The sweet spot for growing clinics & local contractors.</div>
+                    <div class="pricing-price">$997<span>/mo</span></div>
+                    <div class="pricing-decoy-price">Normally $1,497/mo</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Starter Suite</li>
+                        <li>**24/7 AI Voice Receptionist**</li>
+                        <li>Interactive Booking Integration</li>
+                        <li>Speed-to-Lead Follow-up Sequences</li>
+                        <li>Google Business Profile review sync</li>
+                        <li class="disabled">Custom API Integrations</li>
+                    </ul>
+                    <a href="#wizard" class="cta-button">Hire AI Employee</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pricing-card">
+                    <div class="pricing-name">Enterprise Suite</div>
+                    <div class="pricing-desc">For multi-location gyms, franchises & legal firms.</div>
+                    <div class="pricing-price">$1,997<span>/mo</span></div>
+                    <div class="pricing-decoy-price">Normally $2,997/mo</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Growth Suite</li>
+                        <li>500+ AI Voice Answering Minutes</li>
+                        <li>AI Support Ticketing System</li>
+                        <li>Up to 5 Custom n8n Automations</li>
+                        <li>Custom EMR/Scheduling API Connects</li>
+                        <li>Priority Support SLAs</li>
+                    </ul>
+                    <a href="#wizard" class="cta-button secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Conversion Wizard -->
+    <section id="wizard" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Setup</span>
+                <h2 class="section-title">Claim Your Free AI Mockup</h2>
+                <p class="section-subtitle">Select your bottlenecks and see what an AI Employee can do for your specific business in 48 hours.</p>
+            </div>
+
+            <div class="wizard-panel">
+                <div class="wizard-progress">
+                    <div id="wizard-progress-bar" class="wizard-progress-bar"></div>
+                </div>
+                
+                <!-- Step 1: Bottleneck -->
+                <div class="wizard-step active" id="step-0">
+                    <div class="wizard-title">What is your biggest operational bottleneck?</div>
+                    <div class="wizard-options-grid">
+                        <div class="wizard-option" data-category="bottleneck" data-value="Missing calls / No-shows">
+                            <div class="wizard-option-icon">📞</div>
+                            <span class="wizard-option-label">Missing Calls & No-shows</span>
+                        </div>
+                        <div class="wizard-option" data-category="bottleneck" data-value="Slow lead response">
+                            <div class="wizard-option-icon">⚡</div>
+                            <span class="wizard-option-label">Slow Lead Response (Speed-to-lead)</span>
+                        </div>
+                        <div class="wizard-option" data-category="bottleneck" data-value="Stagnant Google reviews">
+                            <div class="wizard-option-icon">⭐</div>
+                            <span class="wizard-option-label">Stagnant Google Reviews</span>
+                        </div>
+                        <div class="wizard-option" data-category="bottleneck" data-value="Manual scheduling chaos">
+                            <div class="wizard-option-icon">📅</div>
+                            <span class="wizard-option-label">Manual Booking & Admin Chaos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Call Volume -->
+                <div class="wizard-step" id="step-1">
+                    <div class="wizard-title">What is your monthly inbound call volume?</div>
+                    <div class="wizard-options-grid">
+                        <div class="wizard-option" data-category="volume" data-value="Under 100 calls">
+                            <div class="wizard-option-icon">🟢</div>
+                            <span class="wizard-option-label">Under 100 Calls / Mo</span>
+                        </div>
+                        <div class="wizard-option" data-category="volume" data-value="100 - 500 calls">
+                            <div class="wizard-option-icon">🟡</div>
+                            <span class="wizard-option-label">100 - 500 Calls / Mo</span>
+                        </div>
+                        <div class="wizard-option" data-category="volume" data-value="500 - 1,000 calls">
+                            <div class="wizard-option-icon">🟠</div>
+                            <span class="wizard-option-label">500 - 1,000 Calls / Mo</span>
+                        </div>
+                        <div class="wizard-option" data-category="volume" data-value="1,000+ calls">
+                            <div class="wizard-option-icon">🔴</div>
+                            <span class="wizard-option-label">1,000+ Calls / Mo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Lead Capture -->
+                <div class="wizard-step" id="step-2">
+                    <div class="wizard-title">Where should we send your custom AI prototype?</div>
+                    <div class="wizard-input-group">
+                        <input type="text" id="wiz-name" class="wizard-input" placeholder="Your Full Name" required>
+                        <input type="text" id="wiz-biz" class="wizard-input" placeholder="Business Name" required>
+                        <input type="email" id="wiz-email" class="wizard-input" placeholder="Corporate Email" required>
+                        <input type="tel" id="wiz-phone" class="wizard-input" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <!-- Step 4: Success Screen -->
+                <div class="wizard-step" id="step-3">
+                    <div class="wizard-success">
+                        <div class="success-icon">✓</div>
+                        <h3 id="success-headline" class="wizard-title">Compiling AI Mockup...</h3>
+                        <p class="section-subtitle">We are analyzing your website assets. You will receive an SMS text with your custom Voice AI prototype phone number in 24-48 hours.</p>
+                        <div class="success-loader">
+                            <div class="success-loader-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="wizard-navigation">
+                    <button id="wizard-prev" class="wizard-nav-btn prev">Back</button>
+                    <button id="wizard-next" class="wizard-nav-btn next">Next Step</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2026 Aetheria AI. All rights reserved. Built with precision for local business scale.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
